@@ -38,6 +38,7 @@
                     <page string="Addresses" attrs="{'invisible': [('is_company','!=', True)]}">
                         <group>
                             <group string="Real address">
+                                <field name="real_use_main" on_change="real_change(real_use_main,country_id,city,district,state_id_kladr,street,house,office,zip)"/>
                                 <label for="street_real" string="Address"/>
                                 <div name="kladr_address">
                                 <field name="country_id_real" placeholder="Country" class="oe_no_button" options='{"no_open": True}' attrs="{'readonly': [('use_parent_address','=',True)]}"/>
@@ -55,6 +56,7 @@
                                 </div>
                             </group>
                             <group string="Post address">
+                                <field name="post_use_main" on_change="post_change(post_use_main,country_id,city,district,state_id_kladr,street,house,office,zip)"/>
                                 <label for="street_post" string="Address"/>
                                 <div name="kladr_address">
                                 <field name="country_id_post" placeholder="Country" class="oe_no_button" options='{"no_open": True}' attrs="{'readonly': [('use_parent_address','=',True)]}"/>

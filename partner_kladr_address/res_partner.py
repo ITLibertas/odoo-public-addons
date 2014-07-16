@@ -141,6 +141,19 @@ class res_partner(osv.osv):
                 result['state_id'] = state_obj[0].id
         return {'value': result}
 
+    def real_change(self, cr, uid, id, check,country_id,city,district,state_id_kladr,street,house,office,zip, context=None):
+        if check:
+            return {'value': {'country_id_real':country_id,'city_real':city,'street_real':street,'zip_real':zip,
+            'district_real':district,'state_id_real':state_id_kladr,'house_real':house,'office_real':office}}
+        return {}
+
+    def post_change(self, cr, uid, id, check,country_id,city,district,state_id_kladr,street,house,office,zip, context=None):
+        if check:
+            return {'value': {'country_id_post':country_id,'city_post':city,'street_post':street,'zip_post':zip,
+            'district_post':district,'state_id_post':state_id_kladr,'house_post':house,'office_post':office}}
+        return {}
+
+
     _columns = {
         'district': fields.char('District', size=128),
         'state_id_kladr': fields.char('State', size=128),
@@ -148,6 +161,7 @@ class res_partner(osv.osv):
         'office': fields.char('Office', size=64),
         'full_r_address':fields.function(z_full_r_address,string="Full address", type="char"),
         #Real address
+        'real_use_main':fields.boolean(u'Исп.юр.адр.'),
         'country_id_real': fields.many2one('res.country', 'Country', ondelete='restrict'),
         'city_real': fields.char('City', size=128),
         'street_real': fields.char('Street', size=128),
@@ -158,6 +172,7 @@ class res_partner(osv.osv):
         'office_real': fields.char('Office', size=64),
         'full_real_address':fields.function(z_full_real_address,string="Full address", type="char"),
         #Post address
+        'post_use_main':fields.boolean(u'Исп.юр.адр.'),
         'country_id_post': fields.many2one('res.country', 'Country', ondelete='restrict'),
         'city_post': fields.char('City', size=128),
         'street_post': fields.char('Street', size=128),

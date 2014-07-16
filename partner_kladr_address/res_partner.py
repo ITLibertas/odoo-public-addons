@@ -1,8 +1,17 @@
 # -*- coding: utf-8 -*-
 
 from openerp.osv import osv, fields
+
+ADDRESS_KLADR_FIELDS = ('street', 'street2', 'zip', 'city', 'state_id', 'country_id', 'house', 'office', 'district', 'state_id_kladr')
+
 class res_partner(osv.osv):
     _inherit = "res.partner"
+
+    def _address_fields(self, cr, uid, context=None):
+        """ Returns the list of address fields that are synced from the parent
+        when the `use_parent_address` flag is set. """
+        return list(ADDRESS_KLADR_FIELDS)
+
     def z_full_r_address(self, cr, uid, ids, field_name, args, context=None):
          res = {}        
          partner_address=''

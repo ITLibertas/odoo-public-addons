@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    	<record id="view_partner_bank_form" model="ir.ui.view">
+            <field name="name">res.partner.bank.form</field>
+            <field name="model">res.partner.bank</field>
+            <field name="inherit_id" ref="base.view_partner_bank_form" />            
+            <field name="arch" type="xml">
+                <field name="state" position="after">
+                    <field name="partner_id" on_change="onchange_partner_id(partner_id)"/>
+                </field>
+                <group name="owner" position="replace">
+                    <group name="owner" invisible="1"/>
+                </group>
+            </field>
+        </record>
+    </data>
+</openerp>

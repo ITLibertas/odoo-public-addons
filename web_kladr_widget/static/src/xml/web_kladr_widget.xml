@@ -1,0 +1,104 @@
+<template>
+<t t-name="kladr_city">
+    <span t-att-class="'oe_form_field '+widget.widget_class" t-att-style="widget.node.attrs.style">
+            <t t-if="!widget.get('effective_readonly')">
+                <input t-att-type="widget.password ? 'password' : 'text'"
+                    t-att-id="widget.id_for_label"
+                    t-att-tabindex="widget.node.attrs.tabindex"
+                    t-att-autofocus="widget.node.attrs.autofocus"
+                    t-att-placeholder="widget.node.attrs.placeholder"
+                    t-att-maxlength="widget.field.size"
+                    name="kladr_city"
+                /><img class="oe_field_translate oe_input_icon" t-if="widget.field.translate" t-att-src='_s + "/web/static/src/img/icons/terp-translate.png"' width="16" height="16" border="0"/>
+            </t>
+            <t t-if="widget.get('effective_readonly')">
+                <span class="oe_form_char_content"></span>
+            </t>
+        </span>
+</t>
+<t t-name="kladr_region">
+    <span t-att-class="'oe_form_field '+widget.widget_class" t-att-style="widget.node.attrs.style">
+            <t t-if="!widget.get('effective_readonly')">
+                <input t-att-type="widget.password ? 'password' : 'text'"
+                    t-att-id="widget.id_for_label"
+                    t-att-tabindex="widget.node.attrs.tabindex"
+                    t-att-autofocus="widget.node.attrs.autofocus"
+                    t-att-placeholder="widget.node.attrs.placeholder"
+                    t-att-maxlength="widget.field.size"
+                    name="kladr_region"
+                /><img class="oe_field_translate oe_input_icon" t-if="widget.field.translate" t-att-src='_s + "/web/static/src/img/icons/terp-translate.png"' width="16" height="16" border="0"/>
+            </t>
+            <t t-if="widget.get('effective_readonly')">
+                <span class="oe_form_char_content"></span>
+            </t>
+        </span>
+</t>
+<t t-name="kladr_district">
+    <span t-att-class="'oe_form_field '+widget.widget_class" t-att-style="widget.node.attrs.style">
+            <t t-if="!widget.get('effective_readonly')">
+                <input t-att-type="widget.password ? 'password' : 'text'"
+                    t-att-id="widget.id_for_label"
+                    t-att-tabindex="widget.node.attrs.tabindex"
+                    t-att-autofocus="widget.node.attrs.autofocus"
+                    t-att-placeholder="widget.node.attrs.placeholder"
+                    t-att-maxlength="widget.field.size"
+                    name="kladr_district"
+                /><img class="oe_field_translate oe_input_icon" t-if="widget.field.translate" t-att-src='_s + "/web/static/src/img/icons/terp-translate.png"' width="16" height="16" border="0"/>
+            </t>
+            <t t-if="widget.get('effective_readonly')">
+                <span class="oe_form_char_content"></span>
+            </t>
+        </span>
+</t>
+<t t-name="kladr_street">
+    <span t-att-class="'oe_form_field '+widget.widget_class" t-att-style="widget.node.attrs.style">
+            <t t-if="!widget.get('effective_readonly')">
+                <input t-att-type="widget.password ? 'password' : 'text'"
+                    t-att-id="widget.id_for_label"
+                    t-att-tabindex="widget.node.attrs.tabindex"
+                    t-att-autofocus="widget.node.attrs.autofocus"
+                    t-att-placeholder="widget.node.attrs.placeholder"
+                    t-att-maxlength="widget.field.size"
+                    name="kladr_street"
+                /><img class="oe_field_translate oe_input_icon" t-if="widget.field.translate" t-att-src='_s + "/web/static/src/img/icons/terp-translate.png"' width="16" height="16" border="0"/>
+            </t>
+            <t t-if="widget.get('effective_readonly')">
+                <span class="oe_form_char_content"></span>
+            </t>
+        </span>
+</t>
+<t t-name="kladr_house">
+    <span t-att-class="'oe_form_field '+widget.widget_class" t-att-style="widget.node.attrs.style">
+            <t t-if="!widget.get('effective_readonly')">
+                <input t-att-type="widget.password ? 'password' : 'text'"
+                    t-att-id="widget.id_for_label"
+                    t-att-tabindex="widget.node.attrs.tabindex"
+                    t-att-autofocus="widget.node.attrs.autofocus"
+                    t-att-placeholder="widget.node.attrs.placeholder"
+                    t-att-maxlength="widget.field.size"
+                    name="kladr_house"
+                /><img class="oe_field_translate oe_input_icon" t-if="widget.field.translate" t-att-src='_s + "/web/static/src/img/icons/terp-translate.png"' width="16" height="16" border="0"/>
+            </t>
+            <t t-if="widget.get('effective_readonly')">
+                <span class="oe_form_char_content"></span>
+            </t>
+        </span>
+</t>
+<t t-name="kladr_zip">
+    <span t-att-class="'oe_form_field '+widget.widget_class" t-att-style="widget.node.attrs.style">
+            <t t-if="!widget.get('effective_readonly')">
+                <input t-att-type="widget.password ? 'password' : 'text'"
+                    t-att-id="widget.id_for_label"
+                    t-att-tabindex="widget.node.attrs.tabindex"
+                    t-att-autofocus="widget.node.attrs.autofocus"
+                    t-att-placeholder="widget.node.attrs.placeholder"
+                    t-att-maxlength="widget.field.size"
+                    name="kladr_zip"
+                /><img class="oe_field_translate oe_input_icon" t-if="widget.field.translate" t-att-src='_s + "/web/static/src/img/icons/terp-translate.png"' width="16" height="16" border="0"/>
+            </t>
+            <t t-if="widget.get('effective_readonly')">
+                <span class="oe_form_char_content"></span>
+            </t>
+        </span>
+</t>
+</template>

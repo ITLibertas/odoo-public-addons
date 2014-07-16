@@ -1,9 +1,9 @@
 {
     'name': 'KLADR address',
-    'version': '0.1',
+    'version': '0.2',
     'category' : 'Sales Management',
     'description': """
-Format address in Russian KLADR
+Format address in Russian KLADR for partner form
 """,
     'author': 'IT Libertas',
     'website': 'http://itlibertas.com',

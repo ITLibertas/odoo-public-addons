@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+         <record model="ir.ui.view" id="crm_case_form_view_leads_kladr">
+            <field name="name">Leads</field>
+            <field name="model">crm.lead</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_leads" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='street']" position="replace"></xpath>
+                <xpath expr="//field[@name='street2']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='state_id']" position="replace"/>
+                <xpath expr="//field[@name='zip']" position="replace"/>
+                <xpath expr="//field[@name='city']" position="replace"/>
+                <xpath expr="//field[@name='country_id']" position="replace"/>
+
+                <xpath expr="//group/group/div/div[@class='address_format']"  position="replace">
+                        <div name="kladr_address">
+                        <field name="country_id" placeholder="Country" class="oe_no_button" options='{"no_open": True}'/>
+                        <field name="city" widget="kladr_city" placeholder="City/Town" />
+                        <div class="address_format">
+                                    <field name="district" widget="kladr_district" placeholder="District" style="width: 50%%" />
+                                    <field name="state_id" invisible="True"/>
+                                    <field name="state_id_kladr" widget="kladr_region" placeholder="State" style="width: 50%%" on_change="onchange_state(state_id_kladr)"/>
+                        </div>
+                        <field name="street" placeholder="Street..." widget="kladr_street" />
+                        <div class="address_format_house_office">
+                                    <field name="house" placeholder="House" widget="kladr_house" style="width: 37%%" />
+                                    <field name="office" placeholder="Office/Appartment" style="width: 39%%" />
+                                    <field name="zip" placeholder="ZIP" widget="kladr_zip" style="width: 17%%" />
+                        </div> 
+                    </div>
+
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

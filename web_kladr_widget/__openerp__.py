@@ -11,7 +11,8 @@ auto check and autocomplete address
     'website': 'http://itlibertas.com',
     'depends': ['web'],
     'js': [
-        'static/src/js/*.js'
+        'static/src/js/jquery.primepix.kladr.min.js',
+	'static/src/js/web_kladr_widget.js',
     ],
     'css': [
     ],

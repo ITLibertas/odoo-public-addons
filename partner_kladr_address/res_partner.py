@@ -16,130 +16,133 @@ class res_partner(osv.osv):
          res = {}        
          partner_address=''
          if ids:
-            partner = self.browse(cr,uid,ids[0])
-            if partner:
-                if partner.zip:
-                    partner_address = partner.zip
-                if partner.state_id_kladr:
-                    if partner_address != '':
-                        if partner.state_id_kladr:
-                            partner_address = partner_address + ', '+partner.state_id_kladr
-                    else:
-                        if partner.state_id_kladr:
-                            partner_address = partner.state_id_kladr
-                if partner.district:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+partner.district
-                    else:
-                        partner_address = partner.district          
-                if partner.city:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+partner.city
-                    else:
-                        partner_address = partner.city
-                if partner.street:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+partner.street
-                    else:
-                        partner_address = partner.street            
-                if partner.house:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+ partner.house
-                    else:
-                        partner_address =  partner.house    
-                if partner.office:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+ partner.office
-                    else:
-                        partner_address =  partner.office
-         for obj in self.browse(cr, uid, ids, context=context):
-            res[obj.id] = partner_address
+            for obj in self.browse(cr, uid, ids, context=context):
+                partner = obj
+                if partner:
+                    if partner.zip:
+                        partner_address = partner.zip
+                    if partner.state_id_kladr:
+                        if partner_address != '':
+                            if partner.state_id_kladr:
+                                partner_address = partner_address + ', '+partner.state_id_kladr
+                        else:
+                            if partner.state_id_kladr:
+                                partner_address = partner.state_id_kladr
+                    if partner.district:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+partner.district
+                        else:
+                            partner_address = partner.district          
+                    if partner.city:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+partner.city
+                        else:
+                            partner_address = partner.city
+                    if partner.street:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+partner.street
+                        else:
+                            partner_address = partner.street            
+                    if partner.house:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+ partner.house
+                        else:
+                            partner_address =  partner.house    
+                    if partner.office:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+ partner.office
+                        else:
+                            partner_address =  partner.office
+             
+                res[obj.id] = partner_address
          return res
     def z_full_real_address(self, cr, uid, ids, field_name, args, context=None):
          res = {}
          partner_address=''
          if ids:
-            partner = self.browse(cr,uid,ids[0])
-            if partner:
-                if partner.zip_real:
-                    partner_address = partner.zip_real
-                if partner.state_id_real:
-                    if partner_address != '':
-                        if partner.state_id_real:
-                            partner_address = partner_address + ', '+partner.state_id_real
-                    else:
-                        if partner.state_id_real:
-                            partner_address = partner.state_id_real
-                if partner.district_real:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+partner.district_real
-                    else:
-                        partner_address = partner.district_real          
-                if partner.city_real:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+partner.city_real
-                    else:
-                        partner_address = partner.city_real
-                if partner.street_real:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+partner.street_real
-                    else:
-                        partner_address = partner.street_real            
-                if partner.house_real:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+ partner.house_real
-                    else:
-                        partner_address =  partner.house_real    
-                if partner.office_real:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+ partner.office_real
-                    else:
-                        partner_address =  partner.office_real
-         for obj in self.browse(cr, uid, ids, context=context):
-            res[obj.id] = partner_address         
+            for obj in self.browse(cr, uid, ids, context=context):
+                partner = obj
+                if partner:
+                    if partner.zip_real:
+                        partner_address = partner.zip_real
+                    if partner.state_id_real:
+                        if partner_address != '':
+                            if partner.state_id_real:
+                                partner_address = partner_address + ', '+partner.state_id_real
+                        else:
+                            if partner.state_id_real:
+                                partner_address = partner.state_id_real
+                    if partner.district_real:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+partner.district_real
+                        else:
+                            partner_address = partner.district_real          
+                    if partner.city_real:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+partner.city_real
+                        else:
+                            partner_address = partner.city_real
+                    if partner.street_real:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+partner.street_real
+                        else:
+                            partner_address = partner.street_real            
+                    if partner.house_real:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+ partner.house_real
+                        else:
+                            partner_address =  partner.house_real    
+                    if partner.office_real:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+ partner.office_real
+                        else:
+                            partner_address =  partner.office_real
+             
+                res[obj.id] = partner_address
          return res
     def z_full_post_address(self, cr, uid, ids, field_name, args, context=None):
          res = {}
          partner_address=''
          if ids:
-            partner = self.browse(cr,uid,ids[0])
-            if partner:
-                if partner.zip_post:
-                    partner_address = partner.zip_post
-                if partner.state_id_post:
-                    if partner_address != '':
-                        if partner.state_id_post:
-                            partner_address = partner_address + ', '+partner.state_id_post
-                    else:
-                        if partner.state_id_post:
-                            partner_address = partner.state_id_post
-                if partner.district_post:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+partner.district_post
-                    else:
-                        partner_address = partner.district_post          
-                if partner.city_post:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+partner.city_post
-                    else:
-                        partner_address = partner.city_post
-                if partner.street_post:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+partner.street_post
-                    else:
-                        partner_address = partner.street_post            
-                if partner.house_post:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+ partner.house_post
-                    else:
-                        partner_address =  partner.house_post    
-                if partner.office_post:
-                    if partner_address != '':
-                        partner_address = partner_address + ', '+ partner.office_post
-                    else:
-                        partner_address =  partner.office_post 
-         for obj in self.browse(cr, uid, ids, context=context):
-            res[obj.id] = partner_address         
+            for obj in self.browse(cr, uid, ids, context=context):
+                partner = obj
+                if partner:
+                    if partner.zip_post:
+                        partner_address = partner.zip_post
+                    if partner.state_id_post:
+                        if partner_address != '':
+                            if partner.state_id_post:
+                                partner_address = partner_address + ', '+partner.state_id_post
+                        else:
+                            if partner.state_id_post:
+                                partner_address = partner.state_id_post
+                    if partner.district_post:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+partner.district_post
+                        else:
+                            partner_address = partner.district_post          
+                    if partner.city_post:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+partner.city_post
+                        else:
+                            partner_address = partner.city_post
+                    if partner.street_post:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+partner.street_post
+                        else:
+                            partner_address = partner.street_post            
+                    if partner.house_post:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+ partner.house_post
+                        else:
+                            partner_address =  partner.house_post    
+                    if partner.office_post:
+                        if partner_address != '':
+                            partner_address = partner_address + ', '+ partner.office_post
+                        else:
+                            partner_address =  partner.office_post 
+             
+                res[obj.id] = partner_address         
          return res
     def onchange_state(self, cr, uid, id, state_name, context=None):
         result = {}

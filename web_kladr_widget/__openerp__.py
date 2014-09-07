@@ -10,9 +10,12 @@ auto check and autocomplete address
     'author': 'IT Libertas',
     'website': 'http://itlibertas.com',
     'depends': ['web'],
+    'data' : [ 
+		'views/web_kladr_widget.xml',
+	],
     'js': [
-        'static/src/js/jquery.primepix.kladr.min.js',
-	'static/src/js/web_kladr_widget.js',
+       # 'static/src/js/jquery.primepix.kladr.min.js',
+	#'static/src/js/web_kladr_widget.js',
     ],
     'css': [
     ],

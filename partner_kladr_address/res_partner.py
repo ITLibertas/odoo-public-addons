@@ -13,11 +13,11 @@ class res_partner(osv.osv):
         return list(ADDRESS_KLADR_FIELDS)
 
     def z_full_r_address(self, cr, uid, ids, field_name, args, context=None):
-         res = {}        
-         partner_address=''
-         if ids:
+        res = {}
+        if ids:
             for obj in self.browse(cr, uid, ids, context=context):
                 partner = obj
+                partner_address=''
                 if partner:
                     if partner.zip:
                         partner_address = partner.zip
@@ -53,15 +53,14 @@ class res_partner(osv.osv):
                             partner_address = partner_address + ', '+ partner.office
                         else:
                             partner_address =  partner.office
-             
                 res[obj.id] = partner_address
-         return res
+        return res
     def z_full_real_address(self, cr, uid, ids, field_name, args, context=None):
-         res = {}
-         partner_address=''
-         if ids:
+        res = {}
+        if ids:
             for obj in self.browse(cr, uid, ids, context=context):
                 partner = obj
+                partner_address=''
                 if partner:
                     if partner.zip_real:
                         partner_address = partner.zip_real
@@ -99,13 +98,13 @@ class res_partner(osv.osv):
                             partner_address =  partner.office_real
              
                 res[obj.id] = partner_address
-         return res
+        return res
     def z_full_post_address(self, cr, uid, ids, field_name, args, context=None):
-         res = {}
-         partner_address=''
-         if ids:
+        res = {}
+        if ids:
             for obj in self.browse(cr, uid, ids, context=context):
                 partner = obj
+                partner_address=''
                 if partner:
                     if partner.zip_post:
                         partner_address = partner.zip_post
@@ -143,7 +142,7 @@ class res_partner(osv.osv):
                             partner_address =  partner.office_post 
              
                 res[obj.id] = partner_address         
-         return res
+        return res
     def onchange_state(self, cr, uid, id, state_name, context=None):
         result = {}
         state_ids = self.pool.get('res.country.state').search(cr,uid,[('name', '=', state_name)],context=None)

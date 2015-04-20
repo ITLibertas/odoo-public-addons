@@ -1,10 +1,8 @@
 {
     'name': 'KLADR address',
-    'version': '0.2',
+    'version': '1.0',
     'category' : 'Sales Management',
-    'description': """
-Format address in Russian KLADR for partner form
-""",
+    'summary': 'Kladr Addresses on a form of partner',
     'author': 'IT Libertas',
     'website': 'http://itlibertas.com',
     'depends': ['base', 'web_kladr_widget'],
@@ -13,5 +11,5 @@ Format address in Russian KLADR for partner form
            'res_bank_view.xml',
     ],
     'installable': True,
-    'images': [],
+    'images': ['static/description/main.png'],
 }

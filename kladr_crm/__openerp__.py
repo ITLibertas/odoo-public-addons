@@ -1,10 +1,8 @@
 {
     'name': 'CRM KLADR',
-    'version': '0.2',
+    'version': '1.0',
     'category' : 'Sales Management',
-    'description': """
-Format address in Russian KLADR for CRM lead
-""",
+    'summary': 'Kladr Addresses on a lead form',
     'author': 'IT Libertas',
     'website': 'http://itlibertas.com',
     'depends': ['base', 'web_kladr_widget','crm'],
@@ -12,5 +10,5 @@ Format address in Russian KLADR for CRM lead
            'crm_lead.xml',
     ],
     'installable': True,
-    'images': [],
+    'images': ['static/description/main.png'],
 }

@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'web_kladr_widget',
-    'version': '0.1',
+    'name': 'Web Kladr Widget',
+    'version': '1.0',
     'category': 'Tools',
-    'description': """
-Web KLADR Custom Widget
-auto check and autocomplete address
-""",
+    'summary': 'Auto check and auto complete addresses by KLADR (FIAS)',
     'author': 'IT Libertas',
     'website': 'http://itlibertas.com',
     'depends': ['web'],
@@ -23,5 +20,5 @@ auto check and autocomplete address
         'static/src/xml/*.xml',
     ],
     'installable': True,
-    'images': [],
+    'images': ['static/description/main.png'],
 }

@@ -7,7 +7,7 @@
 
             <xpath expr="." position="inside">
 
-                <script type="text/javascript" src="/web_kladr_widget/static/src/js/jquery.primepix.kladr.min.js"></script>
+                <script type="text/javascript" src="/web_kladr_widget/static/src/js/jquery.primepix.kladr.js"></script>
                 <script type="text/javascript" src="/web_kladr_widget/static/src/js/web_kladr_widget.js"></script>
 
             </xpath>

@@ -6,7 +6,7 @@ class res_partner_bank(osv.osv):
         'name': fields.char('Bank Account',size=256),
         'bank_name':fields.char('Bank Name', size=256),
     }    
-    def onchange_partner_id(self, cr, uid, id, partner_id, context=None):
+    def onchange_partner_id_kladr(self, cr, uid, id, partner_id, context=None):
         result = {}
         if partner_id:
             part = self.pool.get('res.partner').browse(cr, uid, partner_id, context=context)

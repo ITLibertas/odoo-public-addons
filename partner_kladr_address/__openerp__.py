@@ -1,8 +1,8 @@
 {
     'name': 'KLADR address',
-    'version': '1.0',
+    'version': '1.3',
     'category' : 'Sales Management',
-    'summary': 'Kladr Addresses on a form of partner',
+    'summary': 'KLADR/FIAS addresses auto complete on a partner form',
     'author': 'IT Libertas',
     'website': 'http://itlibertas.com',
     'depends': ['base', 'web_kladr_widget'],

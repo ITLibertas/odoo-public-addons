@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="base.view_partner_bank_form" />            
             <field name="arch" type="xml">
                 <field name="state" position="after">
-                    <field name="partner_id" on_change="onchange_partner_id(partner_id)"/>
+                    <field name="partner_id" on_change="onchange_partner_id_kladr(partner_id)"/>
                 </field>
                 <group name="owner" position="replace">
                     <group name="owner" invisible="1"/>

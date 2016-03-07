@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Web Kladr Widget',
-    'version': '1.0',
+    'version': '1.5',
     'category': 'Tools',
-    'summary': 'Auto check and auto complete addresses by KLADR (FIAS)',
+    'summary': 'KLADR/FIAS addresses auto complete',
     'author': 'IT Libertas',
     'website': 'http://itlibertas.com',
     'depends': ['web'],
